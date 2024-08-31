@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- INFO PAGINA -->
+    <title>UnderCheck®</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="assets/img/Logo UnderCheck.png" type="image/x-icon">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/c46814ff6f.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav id="nav-bar">
+        <a href="/">Under<span>Check®</span></a>
+        <i class="fa-solid fa-bars" id="menu" @click="mostrarmenu"></i>
+        <ul class="nav-ul" :class="{ show: showmenu }">
+            <i class="fa-solid fa-xmark close" id="close" @click="cerrarmenu"></i>
+            <li><a href="#nosotros" title="Nosotros" class="item" @click="cerrarmenu">Nosotros</a></li>
+            <li><a href="#planes" title="Planes" class="item" @click="cerrarmenu">Planes</a></li>
+            <li><a href="#porqueelegirnos" title="Por qué elegirnos" class="item" @click="cerrarmenu">Por qué elegirnos</a></li>
+            <li><a href="#contacto" title="Contacto" class="item" @click="cerrarmenu">Contacto</a></li>
+        </ul>
+    </nav>
+    <main class="scroller">
+        <div id="portada" class="secciones">
+            <img src="assets/img/portada.png" alt="">
+            <section>
+                <h1>UnderCheck</h1>
+                <p>''Keep it Under''</p>
+                <a href="#contacto" class="btn-principal" title="Contactar">ORGANIZAR EVENTO</a>
+            </section>
+            <a id="flechas-inicio" href="#nosotros">
+                <img src="assets/img/arrow.png" alt="" id="flecha1" class="flecha">
+                <img src="assets/img/arrow.png" alt="" id="flecha2" class="flecha">
+                <img src="assets/img/arrow.png" alt="" id="flecha3" class="flecha">
+            </a>
+        </div>
+        <div id="nosotros" class="secciones">
+            <h2>Nosotros</h2>
+            <div id="nosotros-box">
+                <section>
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/aa88af74-48b3-44e1-8526-40c9e727550c/qMPGh3ceN6.json" background="#222222" speed="1" style="width: 500px; height: 500px" loop autoplay direction="1" mode="normal" id="nosotros-img"></lottie-player>
+                </section>
+                <section id="nosotros-text">
+                    <p><span>UnderCheck®</span> nace de una necesidad. Nace del Under Porteño, y de las restricciones para poder acceder a una plataforma de calidad, pero al mismo tiempo low cost.</p>
+                    <p>Para poner en contexto, las ticketeras “líderes” toman valores de intereses elevados (15% y 20%) con respecto al Ticket, y esto eleva los costos generales en cuanto al evento.</p>
+                    <p>En pocas palabras, <span>UnderCheck®</span>  llega al público para poder ampliar el uso de una plataforma de calidad, fácil de usar , intuitiva, y claramente para todos.</p>
+                    <span id="under">“ Keep it Under “</span>
+                </section>
+            </div>
+            
+        </div>
+        <div id="planes" class="secciones">
+            <section>
+                <h2>Planes</h2>
+                <div id="planes-box" class="planes-1">
+                    <section>
+                        <img src="assets/img/box.png" alt="" id="box">
+                    </section>
+                    <section>
+                        <h3>Paquetes customizables</h3>
+                        <ul>
+                            <li>Paquete pre-seteado</li>
+                            <li>Cantidad de tickets limitada</li>
+                        </ul>
+                    </section>
+                </div>
+                <div id="planes-box">
+                    <section>
+                        <img src="assets/img/ticket.png" alt="" id="ticket">
+                    </section>
+                    <section>
+                        <h3>Paquetes libres</h3>
+                        <ul>
+                            <li>Cantidad de tickets ilimitada</li>
+                            <li>Pagás por lo que usas</li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <div id="porqueelegirnos" class="secciones">
+            <section>
+                <h2>Por qué elegirnos</h2>
+                <div id="porqueelegirnos-box">
+                    <section id="section-box">
+                        <section id="section-content">
+                            <div id="img-box">
+                                <img src="assets/img/money.png" alt="" id="money">
+                            </div>
+                            <h3 id="titulo-box">Low cost</h3>
+                            <p id="parrafo-box">Plataforma de calidad a un precio accesible.</p>
+                        </section>
+                    </section>
+                    <section id="section-box">
+                        <section id="section-content">
+                            <div id="img-box">
+                                <img src="assets/img/glow.png" alt="" id="glow">
+                            </div>
+                            <h3 id="titulo-box">Flexibilidad total</h3>
+                            <p id="parrafo-box">Nos amoldamos a tus necesidades.</p>
+                        </section>
+                    </section>
+                    <section id="section-box">
+                        <section id="section-content">
+                            <div id="img-box">
+                                <img src="assets/img/call.png" alt="" id="call">
+                            </div>
+                            <h3 id="titulo-box">Soporte 24hs</h3>
+                            <p id="parrafo-box">Brindamos soporte las 24hs los 365 días del año.</p>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <div id="contacto" class="secciones">
+            <section>
+                <h2>¿Querés organizar un evento? <br> ¡Contactanos!</h2>
+                <form id="form-contacto" action="https://formsubmit.co/matiasmz.dev@gmail.com" method="POST">
+                    <div>
+                        <section id="form-nombre">
+                            <input type="text" placeholder="" title="Ingrese su nombre" required>
+                            <label for="">Nombre</label>
+                        </section>
+                        <section id="form-apellido">
+                            <input type="text" placeholder="" title="Ingrese su apellido" required>
+                            <label for="">Apellido</label>
+                        </section>
+                    </div>
+                    <section id="form-email">
+                        <input type="email" placeholder="" title="Ingrese un email de contacto" required>
+                        <label for="">Email</label>
+                    </section>
+                    <section id="form-mensaje">
+                        <textarea name="" id="" placeholder="" required></textarea>
+                        <label for="">Mensaje</label>
+                    </section>
+                    <button class="btn-principal" type="submit" title="Enviar formulario">Enviar</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="assets/js/animaciones.js"></script>
+</body>
+</html>

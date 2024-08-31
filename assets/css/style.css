@@ -1,0 +1,1059 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+/* PALETA DE COLORES*/
+:root{
+    --color_1:#0fa00f;
+    --color_2:#FAFAFA;
+    --color_3:#9B9D9F;
+    --color_4:#222222;
+    --color_5:#1B1B1B;
+    --color_6:#9B9D9F;
+    --color_7: #5F5F5F;
+    --color_10: #121212;
+
+    --color_letras_logo_1:var(--color_2);
+    --color_letras_logo_2:var(--color_1);
+
+    --color_letras_nav_1:var(--color_3);
+    --color_letras_nav_2:var(--color_2);
+    --color_letras_nav_3:var(--color_1);
+
+    --color_titulo_portada: var(--color_2);
+    --color_subtitulo_portada:var(--color_2);
+    --color_titulos_secciones:var(--color_7);
+
+    --color_fondo_btn_1:var(--color_1);
+    --color_fondo_2_btn_1:#189218;
+    --color_fondo_3_btn_1:#017e01;
+    --color_letras_btn_1:var(--color_2);
+    --color_letras_btn_2:#e5e5e5;
+
+    --color_parrafo_1: var(--color_2);
+    --color_spam: var(--color_1);
+
+    --color_fondo_pagina: var(--color_10);
+    --color_fondo_nav:var(--color_4);
+
+    --color_fondo_cajas:var(--color_4);
+    --color_fondo_cajas_2:var(--color_5);
+    --color_fondo_cajas_3:#5F5F5F;
+    
+    --color_seleccion:rgb(84, 84, 84);
+    
+    --color_titulo_box_1:var(--color_3);
+    --color_titulo_box_2:var(--color_1);
+
+    --color_parrafo_box_1:var(--color_3);
+    --color_parrafo_box_2:#dfdfdf;
+    --color_letras_p_box:#797979;
+
+    --color_letras_resaltadas: var(--color_1);
+
+    --color_borde_resaltado:var(--color_1);
+    --color_borde:var(--color_5);
+
+    --color_input_1:#7B7B7B;
+    --color_input_2:var(--color_2);
+
+    --color_fondo_box_img:#323532;
+
+}
+/* BOTONES */
+.btn-principal{
+    padding: 15px 60px;
+    position: relative;
+    font-weight: 600;
+    color: var(--color_letras_btn_1);
+    background-color: var(--color_fondo_btn_1);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+.btn-principal:active{
+    color: var(--color_letras_btn_2);
+}
+.btn-principal::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color_fondo_2_btn_1);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+.btn-principal:hover::before, .btn-principal:active::before{
+    left: 0;
+}
+.btn-principal:active::before{
+    background-color: var(--color_fondo_3_btn_1);
+}
+::selection {
+    background-color: var(--color_seleccion);
+    color: var(--color_titulo_portada);
+}
+html{
+    background-color: var(--color_fondo_pagina);
+}
+body::-webkit-scrollbar {
+    width: 0px;
+}
+/* ENCABEZADO */
+nav{
+    padding: 35px 300px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 20px;
+    background-color: var(--color_fondo_nav);
+    z-index: 99;
+}
+nav > a{
+    color: var(--color_letras_logo_1);
+}
+.nav-ul{
+    display: flex;
+    gap: 40px;
+}
+.nav-ul > li > a{
+    color: var(--color_letras_nav_1);
+    transition: 0.3s ease;
+}
+.nav-ul > li > a:hover{
+    color: var(--color_letras_nav_2);
+    cursor: pointer;
+}
+.active{
+    color: var(--color_letras_nav_3) !important;
+}
+#menu{
+    display: none;
+    color: var(--color_letras_nav_1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+#menu:hover, #close:hover{
+    color: var(--color_letras_nav_2);
+}
+#close{
+    display: none;
+    color: var(--color_letras_nav_1);
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* TITULOS */
+h1{
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 120px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+h2{
+    margin-bottom: 60px;
+    font-size: 50px;
+    color: var(--color_titulos_secciones);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+h3{
+    color: var(--color_titulo_box_1);
+    font-size: 24px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+p{
+    color: var(--color_parrafo_1);
+    transition: 0.3s;
+}
+li{
+    color: var(--color_parrafo_box_1);
+}
+span{
+    color: var(--color_letras_resaltadas);
+}
+/* SECCIONES */
+.scroller{
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    align-items: center;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+.scroller::-webkit-scrollbar{
+    width: 0px;
+    height: 5px;
+    background-color: transparent;
+}
+.scroller::-webkit-scrollbar-thumb{
+    /* background-color: var(--color_principal); */
+    border-radius: 5px;
+}
+.scroller > div {
+    position: relative;
+    height: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* PORTADA */
+#portada{
+    gap: 50px;
+    color: var(--color_titulo_portada);
+}
+#portada  > section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#portada > section > p{
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+}
+#portada > section > .btn-principal{
+    margin-top: 50px;
+}
+#portada > img{
+    position: absolute;
+    left: 0%;
+    right: 0;
+    z-index: -1;
+}
+#flechas-inicio{
+    margin: 30px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+.flecha{
+    width: 25px;
+    filter: invert(100%) sepia(6%) saturate(60%) hue-rotate(96deg) brightness(111%) contrast(96%);
+    opacity: 0;
+    animation: cambiaOpacity 1.5s infinite;
+}
+#flecha2{
+    animation-delay: 0.25s;
+    transform: translate(0px, -10px);
+}
+#flecha3{
+    animation-delay: 0.50s;
+    transform: translate(0px, -20px);
+}
+/* ANIMACION FLECHAS */
+@keyframes cambiaOpacity {
+    0%,100%{
+      opacity: 1;
+    }
+    55% {
+      opacity: 0;
+    }
+  }
+/* NOSOTROS */
+#nosotros-box{
+    padding: 0px 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--color_fondo_cajas);
+}
+#nosotros-text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+#nosotros section p{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#under{
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 22px;
+}
+/* PLANES */
+#planes{
+    padding: 0px 300px;
+}
+#planes section{
+    display: flex;
+    flex-direction: column;
+}
+#planes-box{
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    border: 1px solid var(--color_borde);
+    cursor: pointer;
+    transition: 0.3s;
+}
+#planes-box img{
+    filter: invert(69%) sepia(5%) saturate(141%) hue-rotate(169deg) brightness(90%) contrast(88%);
+}
+#planes-box h3{
+    margin-bottom: 10px;
+    position: relative;
+    top: -15px;
+    transition: 0.3s;
+}
+#planes-box li{
+    position: relative;
+    top: -10px;
+    font-size: 20px;
+    transition: 0.3s;
+    list-style:inside;
+    padding-left: 10px;
+}
+#planes-box:hover{
+    background-color: var(--color_fondo_cajas);
+    border: 1px solid var(--color_borde_resaltado);
+}
+#planes-box:hover img{
+    filter: invert(53%) sepia(82%) saturate(6327%) hue-rotate(105deg) brightness(103%) contrast(88%);
+}
+#planes-box:hover h3{
+    color: var(--color_letras_resaltadas);
+}
+#planes-box:hover li{
+    color: var(--color_parrafo_box_2);
+}
+#planes section div{
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color_fondo_cajas_2);
+    border-radius: 5px;
+}
+.planes-1{
+    margin-bottom: 50px;
+}
+#box{
+    width: 145px;
+}
+#ticket{
+    width: 138px;
+}
+/* POR QUE ELEGIRNOS */
+#porqueelegirnos-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+}
+#section-box{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color_fondo_cajas_3);
+    border-radius: 10px;
+}
+#section-content{
+    padding: 50px;
+    width: 250px;
+    position: relative; 
+    top: -10px;
+    left: 10px;
+    background-color: var(--color_fondo_cajas);
+    border-radius: 10px;
+    transition: 0.1s;
+    cursor: pointer;
+}
+#section-content:hover{
+    top: -20px;
+    left: 20px;
+}
+#section-box:hover #parrafo-box{
+    color: var(--color_parrafo_1);
+}
+#titulo-box{
+    color: var(--color_letras_resaltadas);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#parrafo-box{
+    color: var(--color_letras_p_box);
+    font-size: 20px;
+    transition: 0.3s;
+}
+#img-box{
+    padding: 20px;
+    width: 90px;
+    height: 90px;
+    background-color: var(--color_fondo_box_img);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+}
+#money, #glow, #call{
+    filter: invert(53%) sepia(82%) saturate(6327%) hue-rotate(105deg) brightness(103%) contrast(88%);
+}
+#money{
+    width: 80px;
+    height: 80px;
+}
+#glow{
+    width: 120px;
+}
+#call{
+    height: 100px;
+    position: relative;
+    top: 5px;
+}
+/* CONTACTO */
+#contacto h2{
+    position: absolute;
+    top: 20%;
+    right: 0%;
+    left: 0%;
+}
+#form-contacto{
+    position: absolute;
+    bottom: 0;
+    left: 18%;
+    right: 18%;
+    padding: 60px 50px;
+    height: max-content;
+    background-color: var(--color_fondo_cajas);
+    border-radius: 5px 5px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+#form-contacto section{
+    position: relative;
+}
+#form-contacto > div{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    width: 100%;
+    gap: 30px;
+}
+#form-nombre, #form-apellido{
+    width: 100%;
+}
+#form-email, #form-mensaje{
+    width: 100%;
+}
+#form-contacto input, #form-contacto textarea{
+    padding: 5px;
+    width: 98%;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--color_input_1);
+    background-color: #00000000;
+    border: 1px solid var(--color_input_1);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+#form-email input{
+    width: 99%;
+}
+#form-contacto label{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color_input_1);
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+#form-contacto textarea{
+    min-width: 99%;
+    min-height: 250px;
+    max-height: 250px;
+    max-width: 99%;
+}
+#form-contacto input:focus, #form-contacto textarea:focus{
+    border-color: var(--color_letras_resaltadas);
+    color: var(--color_input_2);
+}
+#form-contacto input:focus ~ label, #form-contacto textarea:focus ~ label{
+    top: -23px;
+    left: 5px;
+    font-size: 18px;
+    color: var(--color_letras_resaltadas);
+}
+#form-contacto input:-webkit-autofill,
+#form-contacto input:-webkit-autofill:hover, 
+#form-contacto input:-webkit-autofill:focus{
+    -webkit-box-shadow: 0 0 0px 1000px var(--color_fondo_cajas) inset;
+    transition: 0.3s ease;
+}
+#form-contacto input:-webkit-autofill{
+    -webkit-text-fill-color: var(--color_input_1);
+    transition: 0.3s ease;
+}
+#form-contacto input:not(:placeholder-shown) + label,
+#form-contacto input:focus + label{
+    top: -23px;
+    left: 5px;
+    font-size: 18px;
+    opacity: 1;
+}
+#form-contacto textarea:not(:placeholder-shown) + label,
+#form-contacto textarea:focus + label{
+    top: -23px;
+    left: 5px;
+    font-size: 18px;
+    opacity: 1;
+}
+#form-contacto button{
+    margin-top: 10px;
+    width: 40%;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+/* Responsive */
+@media (max-width: 1720px) {
+    #nosotros-box{
+        padding: 0px 200px;
+    }
+    #nosotros section p{
+        font-size: 17px ;
+    }
+    #nosotros-img{
+        width: 350px !important;
+        height: 350px !important;
+    }
+}
+@media (max-width: 1300px) {
+    h1{
+        font-size: 120px;
+    }
+    #menu{
+        display: block;
+    }
+    #close{
+        display: block;
+    }
+    nav{
+        padding: 35px 50px;
+    }
+    .nav-ul{
+        display: none;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--color_fondo_nav);
+    }
+    nav ul.show {
+        display: flex;
+    }
+    #nosotros-box{
+        padding: 30px 50px;
+        gap: 10px;
+    }
+    #nosotros section p{
+        font-size: 18px ;
+    }
+    #nosotros-img{
+        width: 400px !important;
+        height: 400px !important;
+    }
+    #planes{
+        padding: 0px 50px;
+    }
+    #planes-box{
+        width: 700px;
+        gap: 30px;
+    }
+    #porqueelegirnos-box{
+        flex-direction: column;
+        gap: 30px;
+    }
+    #section-box{
+        width: 100%;
+        height: 100%;
+        background-color: var(--color_fondo_cajas_3);
+        border-radius: 10px;
+    }
+    #section-content{
+        padding: 20px;
+        width: 93%;
+        background-color: var(--color_fondo_cajas);
+    }
+    #titulo-box{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    #parrafo-box{
+        font-size: 17px;
+    }
+    #money{
+        width: 50px;
+        height: 50px;
+    }
+    #glow{
+        width: 80px;
+    }
+    #call{
+        height: 60px;
+        position: relative;
+        top: 5px;
+    }
+    #img-box{
+        padding: 10px;
+        width: 55px;
+        height: 55px;
+        margin-bottom: 20px;
+    }
+    #contacto{
+        padding: 0px 50px;
+    }
+    #contacto h2{
+        font-size: 50px;
+        top: 18%;
+    }
+}
+@media (max-width: 1000px) {
+    h1{
+        font-size: 100px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    #portada > section > .btn-principal{
+        margin-top: 50px;
+        padding: 15px 50px;
+    }
+    #menu{
+        display: block;
+    }
+    #close{
+        display: block;
+    }
+    nav{
+        padding: 35px 50px;
+    }
+    .nav-ul{
+        display: none;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--color_fondo_nav);
+    }
+    nav ul.show {
+        display: flex;
+    }
+    #nosotros-box{
+        flex-direction: column;
+        padding: 30px 50px;
+        gap: 10px;
+    }
+    #nosotros section p{
+        font-size: 18px ;
+    }
+    #nosotros-img{
+        width: 200px !important;
+        height: 200px !important;
+    }
+    #planes{
+        padding: 0px 50px;
+    }
+    #planes-box{
+        width: 600px;
+        gap: 30px;
+    }
+    #planes-box h3{
+        font-size: 22px;
+        margin-bottom: 5px;
+        top: -10px;
+    }
+    #planes-box li{
+        font-size: 18px;
+    }
+    #planes section div{
+        padding: 20px;
+    }
+    #box{
+        width: 105px;
+    }
+    #ticket{
+        width: 98px;
+    }
+    #porqueelegirnos-box{
+        flex-direction: column;
+        gap: 30px;
+    }
+    #section-box{
+        width: 100%;
+        height: 100%;
+        background-color: var(--color_fondo_cajas_3);
+        border-radius: 10px;
+    }
+    #section-content{
+        padding: 20px;
+        width: 90%;
+        background-color: var(--color_fondo_cajas);
+    }
+    #titulo-box{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    #parrafo-box{
+        font-size: 17px;
+    }
+    #money{
+        width: 50px;
+        height: 50px;
+    }
+    #glow{
+        width: 80px;
+    }
+    #call{
+        height: 60px;
+        position: relative;
+        top: 5px;
+    }
+    #img-box{
+        padding: 10px;
+        width: 55px;
+        height: 55px;
+        margin-bottom: 20px;
+    }
+    #contacto{
+        padding: 0px 50px;
+    }
+    #contacto h2{
+        font-size: 35px;
+        top: 18%;
+    }
+    #form-contacto{
+        left: 50px;
+        right: 50px;
+        padding: 50px 40px;
+    }
+    #form-contacto label{
+        top: 6px;
+    }
+    #form-contacto button{
+        width: 100%;
+    }
+}
+@media (max-width: 800px) {
+    h1{
+        font-size: 80px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    #portada > section > p{
+        font-size: 25px;
+    }
+    #portada > section > .btn-principal{
+        margin-top: 50px;
+        padding: 15px 50px;
+    }
+    #menu{
+        display: block;
+    }
+    #close{
+        display: block;
+    }
+    nav{
+        padding: 35px 50px;
+    }
+    .nav-ul{
+        display: none;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--color_fondo_nav);
+    }
+    nav ul.show {
+        display: flex;
+    }
+    #nosotros-box{
+        flex-direction: column;
+        padding: 30px 50px;
+        gap: 10px;
+    }
+    #nosotros section p{
+        font-size: 18px ;
+    }
+    #nosotros-img{
+        width: 200px !important;
+        height: 200px !important;
+    }
+    #planes{
+        padding: 0px 50px;
+    }
+    #planes-box{
+        width: 410px;
+        gap: 30px;
+    }
+    #planes-box h3{
+        font-size: 20px;
+        margin-bottom: 5px;
+        top: -10px;
+    }
+    #planes-box li{
+        font-size: 16px;
+    }
+    #planes section div{
+        padding: 20px;
+    }
+    #box{
+        width: 95px;
+    }
+    #ticket{
+        width: 88px;
+    }
+    #porqueelegirnos-box{
+        flex-direction: column;
+        gap: 30px;
+    }
+    #section-box{
+        width: 100%;
+        height: 100%;
+        background-color: var(--color_fondo_cajas_3);
+        border-radius: 10px;
+    }
+    #section-content{
+        padding: 20px;
+        width: 90%;
+        background-color: var(--color_fondo_cajas);
+    }
+    #titulo-box{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    #parrafo-box{
+        font-size: 17px;
+    }
+    #money{
+        width: 50px;
+        height: 50px;
+    }
+    #glow{
+        width: 80px;
+    }
+    #call{
+        height: 60px;
+        position: relative;
+        top: 5px;
+    }
+    #img-box{
+        padding: 10px;
+        width: 55px;
+        height: 55px;
+        margin-bottom: 20px;
+    }
+    #contacto{
+        padding: 0px 50px;
+    }
+    #contacto h2{
+        font-size: 35px;
+        top: 18%;
+    }
+    #form-contacto{
+        left: 50px;
+        right: 50px;
+        padding: 50px 40px;
+    }
+    #form-contacto > div{
+        flex-direction: column;
+        width: 100%;
+    }
+    #form-contacto input, #form-contacto textarea{
+        font-size: 20px;
+        max-width: 96%;
+    }
+    #form-contacto textarea{
+        min-width: 96%;
+        min-height: 250px;
+        max-height: 250px;
+        max-width: 96%;
+    }
+    #form-contacto label{
+        top: 6px;
+    }
+    #form-contacto button{
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    #portada > section > p{
+        font-size: 20px;
+    }
+    #portada > section > .btn-principal{
+        margin-top: 50px;
+        padding: 15px 50px;
+    }
+    #menu{
+        display: block;
+    }
+    #close{
+        display: block;
+    }
+    nav{
+        padding: 35px 50px;
+    }
+    .nav-ul{
+        display: none;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--color_fondo_nav);
+    }
+    nav ul.show {
+        display: flex;
+    }
+    #nosotros-box{
+        flex-direction: column;
+        padding: 30px 50px;
+        gap: 10px;
+    }
+    #nosotros section p{
+        font-size: 18px ;
+    }
+    #nosotros-img{
+        width: 200px !important;
+        height: 200px !important;
+    }
+    #planes{
+        padding: 0px 50px;
+    }
+    #planes-box{
+        width: 410px;
+        gap: 30px;
+    }
+    #planes-box h3{
+        font-size: 20px;
+        margin-bottom: 5px;
+        top: -10px;
+    }
+    #planes-box li{
+        font-size: 16px;
+    }
+    #planes section div{
+        padding: 20px;
+    }
+    #box{
+        width: 95px;
+    }
+    #ticket{
+        width: 88px;
+    }
+    #porqueelegirnos-box{
+        flex-direction: column;
+        gap: 30px;
+    }
+    #section-box{
+        width: 100%;
+        height: 100%;
+        background-color: var(--color_fondo_cajas_3);
+        border-radius: 10px;
+    }
+    #section-content{
+        padding: 20px;
+        width: 90%;
+        background-color: var(--color_fondo_cajas);
+    }
+    #titulo-box{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    #parrafo-box{
+        font-size: 17px;
+    }
+    #money{
+        width: 50px;
+        height: 50px;
+    }
+    #glow{
+        width: 80px;
+    }
+    #call{
+        height: 60px;
+        position: relative;
+        top: 5px;
+    }
+    #img-box{
+        padding: 10px;
+        width: 55px;
+        height: 55px;
+        margin-bottom: 20px;
+    }
+    #contacto{
+        padding: 0px 50px;
+    }
+    #contacto h2{
+        font-size: 35px;
+        top: 18%;
+    }
+    #form-contacto{
+        left: 50px;
+        right: 50px;
+        padding: 50px 40px;
+    }
+    #form-contacto label{
+        top: 6px;
+    }
+    #form-contacto button{
+        width: 100%;
+    }
+}
