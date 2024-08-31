@@ -444,7 +444,7 @@ span{
     bottom: 0;
     left: 18%;
     right: 18%;
-    padding: 60px 50px;
+    padding: 55px 50px;
     height: max-content;
     background-color: var(--color_fondo_cajas);
     border-radius: 5px 5px 0px 0px;
@@ -496,8 +496,8 @@ span{
 }
 #form-contacto textarea{
     min-width: 99%;
-    min-height: 250px;
-    max-height: 250px;
+    min-height: 200px;
+    max-height: 200px;
     max-width: 99%;
 }
 #form-contacto input:focus, #form-contacto textarea:focus{
@@ -901,7 +901,7 @@ span{
     #form-contacto{
         left: 50px;
         right: 50px;
-        padding: 50px 40px;
+        padding: 30px 40px;
     }
     #form-contacto > div{
         flex-direction: column;
@@ -930,6 +930,7 @@ span{
     }
     h2{
         font-size: 40px;
+        margin: 0px 0px 20px 0px;
     }
     #portada > section > p{
         font-size: 20px;
@@ -968,11 +969,11 @@ span{
         gap: 10px;
     }
     #nosotros section p{
-        font-size: 18px ;
+        font-size: 16px ;
     }
     #nosotros-img{
-        width: 200px !important;
-        height: 200px !important;
+        width: 150px !important;
+        height: 150px !important;
     }
     #planes{
         padding: 0px 50px;
@@ -1048,7 +1049,7 @@ span{
     #form-contacto{
         left: 50px;
         right: 50px;
-        padding: 50px 40px;
+        padding: 10px 40px;
     }
     #form-contacto label{
         top: 6px;
