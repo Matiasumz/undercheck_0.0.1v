@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  /* Base (oscuro, tema default) */
+  --color-bg: #272727;
+  --color-surface: #1b1b1b;
+  --color-surface-strong: #0f0f0f;
+  --color-border: #303030;
+  --color-border-strong: #5b5b5b;
+  --color-text: #e9e9e9;
+  --color-text-muted: #868686;
+  --color-text-soft: #bbbbbb;
+
+  /* Acentos verdes de marca */
+  --color-accent: #0fa00f;
+  --color-accent-hover: #16ac16;
+  --color-accent-active: #009100;
+  --color-accent-bright: #0fb40f;
+  --color-accent-line: #10bc10;
+
+  /* Sección de contraste (invierte a la paleta clara original) */
+  --color-contrast-bg: #fafafa;
+  --color-contrast-text: #3a3a3a;
+  --color-contrast-text-muted: #6a6a6a;
+  --color-contrast-border: #d7d7d7;
+
+  --font-display: var(--font-lato);
+  --font-sans: var(--font-lato);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #fafafa;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 18s linear infinite;
+}
