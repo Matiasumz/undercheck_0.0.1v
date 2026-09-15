@@ -1,11 +1,11 @@
+import { Wordmark } from "@/components/ui/Wordmark";
+
 export function Footer() {
   return (
     <footer className="border-t border-border px-6 py-10 sm:px-10">
       <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
         <div>
-          <p className="font-display text-xl font-black tracking-tight text-text">
-            UNDERCHECK
-          </p>
+          <Wordmark className="text-xl" />
           <p className="text-sm text-text-muted">“ Keep it Under ”</p>
         </div>
         <p className="text-sm text-text-muted">

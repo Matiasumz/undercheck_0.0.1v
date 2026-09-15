@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { Wordmark } from "@/components/ui/Wordmark";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 
 export function Hero() {
@@ -40,13 +41,8 @@ export function Hero() {
       >
         Agencia AI-powered
       </p>
-      <h1
-        data-hero-in
-        className="font-display text-[13vw] font-black uppercase leading-[0.85] tracking-tight text-text sm:text-[9vw]"
-      >
-        Under
-        <br />
-        check
+      <h1 data-hero-in>
+        <Wordmark className="text-[13vw] leading-[0.85] sm:text-[9vw]" />
       </h1>
       <p data-hero-in className="max-w-xl text-lg text-text-soft sm:text-xl">
         Desarrollo web, automatizaciones, publicidad y datos — potenciados por

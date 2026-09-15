@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { NavOverlay } from "@/components/layout/NavOverlay";
+import { Wordmark } from "@/components/ui/Wordmark";
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,9 +28,7 @@ export function SiteHeader() {
             priority
           />
           <span className="flex flex-col leading-none">
-            <span className="font-display text-lg font-black tracking-tight text-text">
-              UNDERCHECK
-            </span>
+            <Wordmark className="text-lg" />
             <span className="text-[10px] uppercase tracking-[0.2em] text-text-muted">
               Keep it Under
             </span>
