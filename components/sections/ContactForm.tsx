@@ -13,7 +13,7 @@ export function ContactForm() {
       className="flex flex-col gap-8"
     >
       <input type="hidden" name="_next" value={CONTACT_FORM_REDIRECT} />
-      <input type="hidden" name="_subject" value="Nuevo contacto — Undercheck" />
+      <input type="hidden" name="_subject" value="Nuevo contacto Undercheck" />
       <input
         type="text"
         name="_honey"
@@ -70,7 +70,7 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="self-start rounded-full bg-accent px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-accent-hover"
+        className="self-start rounded-full bg-accent px-8 py-4 text-sm font-bold uppercase tracking-widest text-white shadow-[0_0_40px_-8px_var(--color-accent)] transition-all hover:bg-accent-hover hover:shadow-[0_0_60px_-6px_var(--color-accent-hover)]"
       >
         Enviar
       </button>

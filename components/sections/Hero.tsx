@@ -42,16 +42,17 @@ export function Hero() {
         Agencia AI-powered
       </p>
       <h1 data-hero-in>
-        <Wordmark className="text-[13vw] leading-[0.85] sm:text-[9vw]" />
+        <Wordmark className="text-[13vw] leading-[0.85] drop-shadow-[0_0_60px_var(--color-accent)] sm:text-[9vw]" />
       </h1>
       <p data-hero-in className="max-w-xl text-lg text-text-soft sm:text-xl">
-        Desarrollo web, automatizaciones, publicidad y datos — potenciados por
-        IA para moverte más rápido que el resto.
+        Convertimos tu negocio en una máquina de crecimiento con desarrollo
+        web, automatizaciones, publicidad y datos, todo potenciado por
+        Inteligencia Artificial.
       </p>
       <div data-hero-in className="flex flex-wrap items-center justify-center gap-4">
         <MagneticButton
           href="#contacto"
-          className="rounded-full bg-accent px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-accent-hover"
+          className="rounded-full bg-accent px-8 py-4 text-sm font-bold uppercase tracking-widest text-white shadow-[0_0_40px_-8px_var(--color-accent)] transition-all hover:bg-accent-hover hover:shadow-[0_0_60px_-6px_var(--color-accent-hover)]"
         >
           Empecemos
         </MagneticButton>

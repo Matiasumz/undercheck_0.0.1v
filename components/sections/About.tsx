@@ -11,19 +11,17 @@ export function About() {
         </RevealText>
         <RevealText delay={0.05}>
           <p className="text-2xl leading-snug text-text sm:text-3xl">
-            <span className="font-bold text-text">Undercheck</span> nació
-            resolviendo un problema muy concreto del Under Porteño: acceso a
-            una ticketera de calidad, sin los costos desmedidos de las
-            plataformas “líderes”.
+            <span className="font-bold text-text">Undercheck</span> es la
+            agencia que potencia negocios con desarrollo web,
+            automatizaciones, publicidad y datos, todo con Inteligencia
+            Artificial.
           </p>
         </RevealText>
         <RevealText delay={0.1}>
           <p className="text-lg leading-relaxed text-text-soft">
-            Resolver eso nos llevó a construir mucho más que una ticketera:
-            hoy somos una agencia de desarrollo web, automatizaciones,
-            publicidad y datos, potenciada por IA, que ayuda a otros negocios a
-            moverse más rápido — con la misma lógica de siempre: calidad
-            accesible, sin vueltas.
+            Y no solo lo decimos: lo probamos con productos propios.
+            Undercheck Pass, nuestra ticketera, es uno de ellos: la prueba de
+            que lo que construimos funciona de verdad.
           </p>
         </RevealText>
       </div>

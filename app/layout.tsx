@@ -17,7 +17,7 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://undercheck.com.ar"),
-  title: "Undercheck — Agencia AI-powered",
+  title: "Undercheck: Agencia AI-powered",
   description:
     "Undercheck es una agencia de desarrollo web, automatizaciones, publicidad y datos, potenciada por IA.",
   keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     icon: "/logo-undercheck.png",
   },
   openGraph: {
-    title: "Undercheck — Agencia AI-powered",
+    title: "Undercheck: Agencia AI-powered",
     description:
       "Desarrollo web, automatizaciones, publicidad y datos, potenciados por IA.",
     url: "https://undercheck.com.ar",
