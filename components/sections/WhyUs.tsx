@@ -8,7 +8,7 @@ export function WhyUs() {
       className="bg-contrast-bg px-6 py-28 text-contrast-text sm:px-10"
     >
       <div className="mx-auto max-w-5xl">
-        <RevealText>
+        <RevealText className="text-center">
           <h2 className="font-display text-sm uppercase tracking-[0.3em] text-accent-active">
             Por qué elegirnos
           </h2>

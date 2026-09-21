@@ -33,7 +33,7 @@ export function Hero() {
     <section
       id="top"
       ref={containerRef}
-      className="flex min-h-svh flex-col items-start justify-center gap-8 px-6 pt-28 sm:px-10"
+      className="flex min-h-svh flex-col items-center justify-center gap-8 px-6 pt-28 text-center sm:px-10"
     >
       <p
         data-hero-in
@@ -48,7 +48,7 @@ export function Hero() {
         Desarrollo web, automatizaciones, publicidad y datos — potenciados por
         IA para moverte más rápido que el resto.
       </p>
-      <div data-hero-in className="flex flex-wrap items-center gap-4">
+      <div data-hero-in className="flex flex-wrap items-center justify-center gap-4">
         <MagneticButton
           href="#contacto"
           className="rounded-full bg-accent px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-accent-hover"

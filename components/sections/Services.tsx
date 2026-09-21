@@ -9,14 +9,14 @@ export function Services() {
   return (
     <section id="servicios" className="px-6 py-28 sm:px-10">
       <div className="mx-auto max-w-5xl">
-        <RevealText>
+        <RevealText className="mx-auto max-w-2xl text-center">
           <p className="font-display text-sm uppercase tracking-[0.3em] text-accent">
             Servicios
           </p>
           <h2 className="mt-4 font-display text-4xl font-black uppercase tracking-tight text-text sm:text-5xl">
             Soluciones para tu negocio
           </h2>
-          <p className="mt-4 max-w-2xl text-lg text-text-soft">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-text-soft">
             Herramientas pensadas para resolver cuellos de botella concretos:
             desarrollo, automatización, publicidad y datos, con IA integrada
             en cada una.

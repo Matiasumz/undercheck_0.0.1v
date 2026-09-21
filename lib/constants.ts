@@ -72,3 +72,6 @@ export const whyUsItems: WhyUsItem[] = [
 export const CONTACT_FORM_ACTION =
   "https://formsubmit.co/3deb109c88bc7ca20ef7d44acf5a95bc";
 export const CONTACT_FORM_REDIRECT = "https://undercheck.com.ar/";
+
+export const WHATSAPP_NUMBER = "5491138770890";
+export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;

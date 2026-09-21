@@ -5,6 +5,8 @@ import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvide
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
 import { GrainOverlay } from "@/components/ui/GrainOverlay";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 const lato = Lato({
   variable: "--font-lato",
@@ -47,10 +49,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="es" className={`${lato.variable} h-full antialiased`}>
       <body className="min-h-full">
         <SmoothScrollProvider>
+          <AmbientBackground />
           <GrainOverlay />
           <SiteHeader />
           {children}
           <Footer />
+          <WhatsAppButton />
         </SmoothScrollProvider>
       </body>
     </html>

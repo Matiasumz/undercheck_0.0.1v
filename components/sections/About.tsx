@@ -3,7 +3,7 @@ import { RevealText } from "@/components/ui/RevealText";
 export function About() {
   return (
     <section id="nosotros" className="px-6 py-28 sm:px-10">
-      <div className="mx-auto flex max-w-3xl flex-col gap-6">
+      <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
         <RevealText>
           <h2 className="font-display text-sm uppercase tracking-[0.3em] text-accent">
             Nosotros
