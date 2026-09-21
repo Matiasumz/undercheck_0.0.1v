@@ -48,13 +48,20 @@ export function Hero() {
         Desarrollo web, automatizaciones, publicidad y datos — potenciados por
         IA para moverte más rápido que el resto.
       </p>
-      <MagneticButton
-        href="#contacto"
-        data-hero-in
-        className="rounded-full bg-accent px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-accent-hover"
-      >
-        Empecemos
-      </MagneticButton>
+      <div data-hero-in className="flex flex-wrap items-center gap-4">
+        <MagneticButton
+          href="#contacto"
+          className="rounded-full bg-accent px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-accent-hover"
+        >
+          Empecemos
+        </MagneticButton>
+        <MagneticButton
+          href="#servicios"
+          className="rounded-full border border-border-strong px-8 py-4 text-sm font-bold uppercase tracking-widest text-text transition-colors hover:border-accent hover:text-accent"
+        >
+          Ver servicios
+        </MagneticButton>
+      </div>
     </section>
   );
 }
