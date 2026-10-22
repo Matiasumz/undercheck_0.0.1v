@@ -1,25 +1,29 @@
-import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Archivo, Doto } from "next/font/google";
 import "./globals.css";
-import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
-import { GrainOverlay } from "@/components/ui/GrainOverlay";
-import { AmbientBackground } from "@/components/ui/AmbientBackground";
-import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
-const lato = Lato({
-  variable: "--font-lato",
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
+  axes: ["wdth"],
+  display: "swap",
+});
+
+// Dot-matrix en dosis homeopáticas: una fecha, un dato, un código.
+const doto = Doto({
+  variable: "--font-doto",
+  subsets: ["latin"],
+  weight: ["700", "900"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://undercheck.com.ar"),
-  title: "Undercheck: Agencia AI-powered",
+  title: "Undercheck: agencia de desarrollo web, automatizaciones, publicidad y datos",
   description:
-    "Undercheck es una agencia de desarrollo web, automatizaciones, publicidad y datos, potenciada por IA.",
+    "Undercheck es una agencia de desarrollo web, automatizaciones, publicidad y datos. Usamos inteligencia artificial en cada proyecto.",
   keywords: [
     "Undercheck",
     "agencia digital",
@@ -34,9 +38,9 @@ export const metadata: Metadata = {
     icon: "/logo-undercheck.png",
   },
   openGraph: {
-    title: "Undercheck: Agencia AI-powered",
+    title: "Undercheck",
     description:
-      "Desarrollo web, automatizaciones, publicidad y datos, potenciados por IA.",
+      "Agencia de desarrollo web, automatizaciones, publicidad y datos, con inteligencia artificial en cada proyecto.",
     url: "https://undercheck.com.ar",
     siteName: "Undercheck",
     locale: "es_AR",
@@ -44,18 +48,18 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#1B1A18",
+  colorScheme: "dark",
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${lato.variable} h-full antialiased`}>
+    <html lang="es" className={`${archivo.variable} ${doto.variable} h-full`}>
       <body className="min-h-full">
-        <SmoothScrollProvider>
-          <AmbientBackground />
-          <GrainOverlay />
-          <SiteHeader />
-          {children}
-          <Footer />
-          <WhatsAppButton />
-        </SmoothScrollProvider>
+        <SiteHeader />
+        {children}
+        <Footer />
       </body>
     </html>
   );

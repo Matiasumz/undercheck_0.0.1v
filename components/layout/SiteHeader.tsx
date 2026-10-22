@@ -1,66 +1,36 @@
-"use client";
+import { navLinks } from "@/lib/constants";
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
-import { NavOverlay } from "@/components/layout/NavOverlay";
-import { Wordmark } from "@/components/ui/Wordmark";
-
+// Landing de una sola página: alcanza con el header, sin barra inferior.
+// En mobile quedan el logotipo y la acción de contacto; los links de
+// sección aparecen desde sm.
 export function SiteHeader() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
-
   return (
-    <>
-      <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between bg-surface-strong/70 px-6 py-5 backdrop-blur-sm sm:px-10">
-        <a href="#top" className="flex items-center gap-3">
-          <Image
-            src="/logo-undercheck.png"
-            alt="Undercheck"
-            width={36}
-            height={36}
-            className="rounded-sm"
-            priority
-          />
-          <span className="flex flex-col leading-none">
-            <Wordmark className="text-lg" />
-            <span className="text-[10px] uppercase tracking-[0.2em] text-text-muted">
-              Keep it Under
-            </span>
-          </span>
+    <header className="sticky top-0 z-50 border-b border-junta/60 bg-concreto/90 backdrop-blur-md">
+      <div className="container-site flex h-16 items-center justify-between gap-4">
+        <a
+          href="#top"
+          className="type-poster -mx-1 rounded-sm px-1 text-2xl text-yeso"
+        >
+          undercheck
         </a>
 
-        <button
-          type="button"
-          onClick={() => setIsOpen((prev) => !prev)}
-          aria-expanded={isOpen}
-          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
-          className="relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5"
-        >
-          <span
-            className={`h-[2px] w-6 bg-text transition-transform duration-300 ${
-              isOpen ? "translate-y-[7px] rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`h-[2px] w-6 bg-text transition-opacity duration-300 ${
-              isOpen ? "opacity-0" : "opacity-100"
-            }`}
-          />
-          <span
-            className={`h-[2px] w-6 bg-text transition-transform duration-300 ${
-              isOpen ? "-translate-y-[7px] -rotate-45" : ""
-            }`}
-          />
-        </button>
-      </header>
-
-      <NavOverlay isOpen={isOpen} onNavigate={() => setIsOpen(false)} />
-    </>
+        <nav aria-label="Principal" className="flex items-center gap-1">
+          <ul className="hidden items-center gap-1 sm:flex">
+            {navLinks
+              .filter((link) => link.href !== "#contacto")
+              .map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="btn btn-ghost">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+          </ul>
+          <a href="#contacto" className="btn btn-primary ml-2">
+            Escribinos
+          </a>
+        </nav>
+      </div>
+    </header>
   );
 }

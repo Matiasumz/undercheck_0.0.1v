@@ -1,29 +1,28 @@
 import { whyUsItems } from "@/lib/constants";
-import { RevealText } from "@/components/ui/RevealText";
 
 export function WhyUs() {
   return (
     <section
       id="porqueelegirnos"
-      className="bg-contrast-bg px-6 py-28 text-contrast-text sm:px-10"
+      className="scroll-mt-16 border-t border-junta"
     >
-      <div className="mx-auto max-w-5xl">
-        <RevealText className="text-center">
-          <h2 className="font-display text-sm uppercase tracking-[0.3em] text-accent-active">
+      <div className="container-site py-16 sm:py-24">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
+          <h2 className="type-title text-3xl text-yeso lg:col-span-4">
             Por qué elegirnos
           </h2>
-        </RevealText>
-        <div className="mt-12 grid gap-10 sm:grid-cols-3">
-          {whyUsItems.map((item, index) => (
-            <RevealText key={item.id} delay={index * 0.08}>
-              <div className="border-t border-contrast-border pt-6">
-                <h3 className="font-display text-2xl font-black uppercase tracking-tight">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-contrast-text-muted">{item.description}</p>
+
+          <dl className="border-y border-junta lg:col-span-8">
+            {whyUsItems.map((item) => (
+              <div
+                key={item.id}
+                className="grid gap-1 border-t border-junta py-5 first:border-t-0 sm:grid-cols-[14rem_1fr] sm:gap-8"
+              >
+                <dt className="font-medium text-yeso">{item.title}</dt>
+                <dd className="leading-[1.6] text-humo">{item.description}</dd>
               </div>
-            </RevealText>
-          ))}
+            ))}
+          </dl>
         </div>
       </div>
     </section>

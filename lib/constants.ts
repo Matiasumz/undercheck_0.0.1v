@@ -8,7 +8,6 @@ export type NavLink = {
 export const navLinks: NavLink[] = [
   { label: "Nosotros", href: "#nosotros" },
   { label: "Servicios", href: "#servicios" },
-  { label: "Por qué elegirnos", href: "#porqueelegirnos" },
   { label: "Contacto", href: "#contacto" },
 ];
 
@@ -21,27 +20,27 @@ export type Service = {
 export const services: Service[] = [
   {
     id: "web",
-    title: "Desarrollo Web",
+    title: "Desarrollo web",
     description:
-      "Sitios y productos digitales a medida, con asistencia de IA en cada etapa del desarrollo para construir más rápido y con menos fricción.",
+      "Sitios y productos digitales a medida. Usamos IA en cada etapa del desarrollo para construir más rápido.",
   },
   {
     id: "automatizaciones",
     title: "Automatizaciones",
     description:
-      "Flujos y procesos que se ejecutan solos: integraciones, bots y agentes de IA que le sacan trabajo repetitivo a tu equipo.",
+      "Integraciones, bots y agentes de IA que hacen solos el trabajo repetitivo de tu equipo.",
   },
   {
     id: "publicidad",
     title: "Publicidad",
     description:
-      "Campañas y contenido pensados con IA para iterar rápido, testear más variantes y encontrar qué funciona antes.",
+      "Campañas y contenido hechos con IA para probar más variantes y encontrar antes lo que funciona.",
   },
   {
     id: "datos",
     title: "Datos",
     description:
-      "Paneles y modelos que convierten datos crudos en decisiones, con IA aplicada a análisis y predicción.",
+      "Paneles y modelos que ordenan tus datos para decidir, con IA aplicada a análisis y predicción.",
   },
 ];
 
@@ -53,19 +52,19 @@ export type WhyUsItem = {
 
 export const whyUsItems: WhyUsItem[] = [
   {
-    id: "low-cost",
-    title: "Low cost",
-    description: "Soluciones de calidad a un precio accesible.",
+    id: "precio",
+    title: "Precio accesible",
+    description: "Trabajo de calidad a un costo que una pyme puede pagar.",
   },
   {
     id: "flexibilidad",
-    title: "Flexibilidad total",
-    description: "Nos amoldamos a tus necesidades y a las de tu proyecto.",
+    title: "Flexibilidad",
+    description: "Adaptamos el alcance y los tiempos a tu proyecto.",
   },
   {
     id: "soporte",
-    title: "Soporte 24hs",
-    description: "Acompañamiento real, los 365 días del año.",
+    title: "Soporte 24 h",
+    description: "Te acompañamos los 365 días del año.",
   },
 ];
 
@@ -74,4 +73,5 @@ export const CONTACT_FORM_ACTION =
 export const CONTACT_FORM_REDIRECT = "https://undercheck.com.ar/";
 
 export const WHATSAPP_NUMBER = "5491138770890";
+export const WHATSAPP_DISPLAY = "+54 9 11 3877-0890";
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;

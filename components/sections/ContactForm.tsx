@@ -1,16 +1,11 @@
 import { CONTACT_FORM_ACTION, CONTACT_FORM_REDIRECT } from "@/lib/constants";
 
-const fieldClass =
-  "peer w-full border-b border-border-strong bg-transparent py-3 text-text placeholder-transparent focus:border-accent focus:outline-none";
-const labelClass =
-  "pointer-events-none absolute left-0 top-3 text-text-muted transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-xs peer-focus:text-accent -top-3 text-xs";
-
 export function ContactForm() {
   return (
     <form
       action={CONTACT_FORM_ACTION}
       method="POST"
-      className="flex flex-col gap-8"
+      className="flex flex-col gap-6"
     >
       <input type="hidden" name="_next" value={CONTACT_FORM_REDIRECT} />
       <input type="hidden" name="_subject" value="Nuevo contacto Undercheck" />
@@ -23,56 +18,70 @@ export function ContactForm() {
         aria-hidden
       />
 
-      <div className="grid gap-8 sm:grid-cols-2">
-        <div className="relative">
+      <div className="grid gap-6 sm:grid-cols-2">
+        <div className="flex flex-col gap-2">
+          <label htmlFor="nombre" className="label">
+            Nombre
+          </label>
           <input
+            id="nombre"
             type="text"
             name="nombre"
-            placeholder="Nombre"
+            autoComplete="given-name"
             required
-            className={fieldClass}
+            className="input"
           />
-          <label className={labelClass}>Nombre</label>
         </div>
-        <div className="relative">
+        <div className="flex flex-col gap-2">
+          <label htmlFor="apellido" className="label">
+            Apellido
+          </label>
           <input
+            id="apellido"
             type="text"
             name="apellido"
-            placeholder="Apellido"
+            autoComplete="family-name"
             required
-            className={fieldClass}
+            className="input"
           />
-          <label className={labelClass}>Apellido</label>
         </div>
       </div>
 
-      <div className="relative">
+      <div className="flex flex-col gap-2">
+        <label htmlFor="email" className="label">
+          Email
+        </label>
         <input
+          id="email"
           type="email"
           name="email"
-          placeholder="Email"
+          autoComplete="email"
+          placeholder="nombre@empresa.com"
           required
-          className={fieldClass}
+          className="input"
+          aria-describedby="email-help"
         />
-        <label className={labelClass}>Email</label>
+        <p id="email-help" className="help">
+          Te respondemos a esta dirección.
+        </p>
       </div>
 
-      <div className="relative">
+      <div className="flex flex-col gap-2">
+        <label htmlFor="mensaje" className="label">
+          Mensaje
+        </label>
         <textarea
+          id="mensaje"
           name="mensaje"
-          placeholder="Mensaje"
+          rows={5}
+          placeholder="Qué necesitás y para cuándo"
           required
-          rows={4}
-          className={fieldClass}
+          className="input"
         />
-        <label className={labelClass}>Mensaje</label>
       </div>
 
-      <button
-        type="submit"
-        className="self-start rounded-full bg-accent px-8 py-4 text-sm font-bold uppercase tracking-widest text-white shadow-[0_0_40px_-8px_var(--color-accent)] transition-all hover:bg-accent-hover hover:shadow-[0_0_60px_-6px_var(--color-accent-hover)]"
-      >
-        Enviar
+      <button type="submit" className="btn btn-accent self-start">
+        Enviar mensaje
       </button>
     </form>
   );
