@@ -13,6 +13,8 @@ export const navLinks: NavLink[] = [
 
 export type Service = {
   id: string;
+  // Código corto de la portada (Doto) y semilla estable de su color.
+  code: string;
   title: string;
   description: string;
 };
@@ -20,24 +22,35 @@ export type Service = {
 export const services: Service[] = [
   {
     id: "web",
+    code: "web",
     title: "Desarrollo web",
     description:
       "Sitios y productos digitales a medida. Usamos IA en cada etapa del desarrollo para construir más rápido.",
   },
   {
     id: "automatizaciones",
+    code: "auto",
     title: "Automatizaciones",
     description:
       "Integraciones, bots y agentes de IA que hacen solos el trabajo repetitivo de tu equipo.",
   },
   {
     id: "publicidad",
+    code: "ads",
     title: "Publicidad",
     description:
       "Campañas y contenido hechos con IA para probar más variantes y encontrar antes lo que funciona.",
   },
   {
+    id: "redes",
+    code: "social",
+    title: "Redes sociales",
+    description:
+      "Estrategia de contenido, gestión de cuentas y community management. Planificamos qué publicar, lo producimos y le respondemos a tu comunidad.",
+  },
+  {
     id: "datos",
+    code: "data",
     title: "Datos",
     description:
       "Paneles y modelos que ordenan tus datos para decidir, con IA aplicada a análisis y predicción.",

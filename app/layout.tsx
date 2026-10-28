@@ -21,26 +21,26 @@ const doto = Doto({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://undercheck.com.ar"),
-  title: "Undercheck: agencia de desarrollo web, automatizaciones, publicidad y datos",
+  title:
+    "Undercheck: agencia de desarrollo web, automatizaciones, publicidad, redes sociales y datos",
   description:
-    "Undercheck es una agencia de desarrollo web, automatizaciones, publicidad y datos. Usamos inteligencia artificial en cada proyecto.",
+    "Undercheck es una agencia de desarrollo web, automatizaciones, publicidad, redes sociales y datos. Usamos inteligencia artificial en cada proyecto.",
   keywords: [
     "Undercheck",
     "agencia digital",
     "desarrollo web",
     "automatizaciones",
     "publicidad",
+    "redes sociales",
+    "community manager",
     "datos",
     "IA",
     "inteligencia artificial",
   ],
-  icons: {
-    icon: "/logo-undercheck.png",
-  },
   openGraph: {
     title: "Undercheck",
     description:
-      "Agencia de desarrollo web, automatizaciones, publicidad y datos, con inteligencia artificial en cada proyecto.",
+      "Agencia de desarrollo web, automatizaciones, publicidad, redes sociales y datos, con inteligencia artificial en cada proyecto.",
     url: "https://undercheck.com.ar",
     siteName: "Undercheck",
     locale: "es_AR",

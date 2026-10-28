@@ -10,8 +10,8 @@ export function Hero() {
         className="hero-in mt-8 max-w-[52ch] text-lg leading-[1.6] text-humo sm:mt-10 sm:text-xl"
         style={{ animationDelay: "120ms" }}
       >
-        Somos una agencia de desarrollo web, automatizaciones, publicidad y
-        datos. Usamos inteligencia artificial en cada proyecto.
+        Somos una agencia de desarrollo web, automatizaciones, publicidad, redes
+        sociales y datos. Usamos inteligencia artificial en cada proyecto.
       </p>
       <div
         className="hero-in mt-8 flex flex-wrap gap-3"

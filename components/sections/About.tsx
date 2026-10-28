@@ -10,8 +10,9 @@ export function About() {
           <div className="lg:col-span-8">
             <p className="max-w-[65ch] text-xl leading-[1.6] text-yeso sm:text-2xl">
               Undercheck es una agencia que ayuda a negocios a crecer con
-              desarrollo web, automatizaciones, publicidad y datos. Trabajamos
-              con inteligencia artificial en todo lo que hacemos.
+              desarrollo web, automatizaciones, publicidad, redes sociales y
+              datos. Trabajamos con inteligencia artificial en todo lo que
+              hacemos.
             </p>
             <p className="mt-6 max-w-[65ch] leading-[1.7] text-humo">
               También hacemos productos propios. Uno de ellos es Undercheck
