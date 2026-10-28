@@ -24,6 +24,15 @@ type ServicePosterProps = {
   className?: string;
 };
 
+// El título corta línea libremente, pero una palabra sola no puede partirse:
+// con palabras largas ("automatizaciones") se baja el cuerpo para que entre.
+function titleSize(title: string) {
+  const longestWord = Math.max(...title.split(" ").map((word) => word.length));
+  if (longestWord > 12) return "text-4xl";
+  if (title.length > 22) return "text-4xl";
+  return "text-5xl lg:text-6xl";
+}
+
 export function ServicePoster({ slug, title, className }: ServicePosterProps) {
   const { bg, ink } = pick(slug);
 
@@ -39,11 +48,7 @@ export function ServicePoster({ slug, title, className }: ServicePosterProps) {
         {slug}
       </span>
       {/* El nombre de la portada es el título real del servicio. */}
-      <h3
-        className={`type-poster lowercase ${title.length > 22 ? "text-4xl" : "text-5xl"} lg:text-6xl`}
-      >
-        {title}
-      </h3>
+      <h3 className={`type-poster lowercase ${titleSize(title)}`}>{title}</h3>
     </div>
   );
 }

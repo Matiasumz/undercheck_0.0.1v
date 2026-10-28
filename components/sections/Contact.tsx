@@ -1,5 +1,5 @@
 import { ContactForm } from "@/components/sections/ContactForm";
-import { WHATSAPP_DISPLAY, WHATSAPP_LINK } from "@/lib/constants";
+import { CONTACT_EMAIL } from "@/lib/constants";
 
 export function Contact() {
   return (
@@ -18,15 +18,10 @@ export function Contact() {
 
             <dl className="mt-8 border-y border-junta">
               <div className="grid grid-cols-[7rem_1fr] gap-4 py-4">
-                <dt className="text-humo">WhatsApp</dt>
+                <dt className="text-humo">Email</dt>
                 <dd>
-                  <a
-                    href={WHATSAPP_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link"
-                  >
-                    {WHATSAPP_DISPLAY}
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="link">
+                    {CONTACT_EMAIL}
                   </a>
                 </dd>
               </div>

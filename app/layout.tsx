@@ -3,6 +3,7 @@ import { Archivo, Doto } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SiteHeader />
         {children}
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
