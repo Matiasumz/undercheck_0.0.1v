@@ -83,8 +83,8 @@ export const whyUsItems: WhyUsItem[] = [
 
 export const CONTACT_EMAIL = "hola@undercheck.com.ar";
 
-export const CONTACT_FORM_ACTION =
-  "https://formsubmit.co/3deb109c88bc7ca20ef7d44acf5a95bc";
+// FormSubmit entrega a hola@, que Cloudflare Email Routing reenvía al Gmail.
+export const CONTACT_FORM_ACTION = `https://formsubmit.co/${CONTACT_EMAIL}`;
 export const CONTACT_FORM_REDIRECT = "https://undercheck.com.ar/";
 
 export const WHATSAPP_NUMBER = "5491138770890";
