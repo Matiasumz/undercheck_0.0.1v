@@ -1,22 +1,26 @@
 export function About() {
   return (
-    <section id="nosotros" className="scroll-mt-16 border-t border-junta">
+    <section id="nosotros" className="scroll-mt-16">
       <div className="container-site py-16 sm:py-24">
-        <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
-          <h2 className="type-title text-3xl text-yeso lg:col-span-4">
-            Nosotros
-          </h2>
+        <h2 className="type-shout text-[18vw] text-yeso sm:text-8xl lg:text-9xl">
+          Nosotros
+        </h2>
 
-          <div className="lg:col-span-8">
-            <p className="max-w-[65ch] text-xl leading-[1.6] text-yeso sm:text-2xl">
-              Undercheck es una agencia integral: desarrollo web,
-              automatizaciones, publicidad, redes sociales y datos, con
-              inteligencia artificial en todo lo que hacemos.
-            </p>
-            <p className="mt-6 max-w-[65ch] text-lg leading-[1.7] text-humo">
-              Además tenemos un producto propio: Undercheck Pass, la ticketera y
-              red social que eligió el under porteño. Lo que construimos para
-              nuestros clientes, primero lo probamos con nuestra propia gente.
+        <div className="mt-10 grid gap-8 lg:mt-14 lg:grid-cols-12">
+          <p className="type-title max-w-[30ch] text-2xl text-yeso sm:text-4xl lg:col-span-7">
+            Undercheck es una agencia integral: desarrollo web,
+            automatizaciones, publicidad, redes sociales y datos, con
+            inteligencia artificial en todo lo que hacemos.
+          </p>
+
+          <div className="flex flex-col justify-between gap-10 rounded-3xl border border-uv p-6 sm:p-8 lg:col-span-5">
+            <h3 className="type-shout text-6xl text-uv sm:text-7xl">
+              Undercheck Pass
+            </h3>
+            <p className="text-lg leading-[1.6] text-humo">
+              Nuestro producto propio: la ticketera y red social que eligió el
+              under porteño. Lo que construimos para nuestros clientes, primero
+              lo probamos con nuestra propia gente.
             </p>
           </div>
         </div>

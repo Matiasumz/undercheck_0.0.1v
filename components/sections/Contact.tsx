@@ -3,9 +3,9 @@ import { CONTACT_EMAIL } from "@/lib/constants";
 
 export function Contact() {
   return (
-    <section id="contacto" className="scroll-mt-16 border-t border-junta">
+    <section id="contacto" className="scroll-mt-16">
       <div className="container-site py-16 sm:py-24">
-        <h2 className="type-poster text-[18vw] text-yeso sm:text-7xl lg:text-[7.5rem]">
+        <h2 className="type-shout text-[15vw] text-yeso sm:text-8xl lg:text-[9rem]">
           ¿Tenés un proyecto?
         </h2>
 
