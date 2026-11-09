@@ -3,6 +3,8 @@ import { Archivo, Doto } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/site";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 const archivo = Archivo({
@@ -20,33 +22,46 @@ const doto = Doto({
   display: "swap",
 });
 
+const description =
+  "Agencia de marketing digital en Buenos Aires: desarrollo web, automatizaciones, publicidad, redes sociales y datos. Usamos inteligencia artificial en cada proyecto.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://undercheck.com.ar"),
-  title:
-    "Undercheck: agencia de desarrollo web, automatizaciones, publicidad, redes sociales y datos",
-  description:
-    "Undercheck es una agencia de desarrollo web, automatizaciones, publicidad, redes sociales y datos. Usamos inteligencia artificial en cada proyecto.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default:
+      "Undercheck | Agencia de marketing digital, desarrollo web y redes sociales",
+    template: "%s | Undercheck",
+  },
+  description,
   keywords: [
     "Undercheck",
-    "agencia digital",
+    "agencia de marketing digital",
+    "agencia digital Buenos Aires",
     "desarrollo web",
+    "diseño de páginas web",
     "automatizaciones",
-    "publicidad",
+    "publicidad digital",
     "redes sociales",
     "community manager",
-    "datos",
-    "IA",
+    "estrategia de contenido",
+    "análisis de datos",
     "inteligencia artificial",
   ],
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Undercheck",
-    description:
-      "Agencia de desarrollo web, automatizaciones, publicidad, redes sociales y datos, con inteligencia artificial en cada proyecto.",
-    url: "https://undercheck.com.ar",
+    title: "Undercheck | Agencia de marketing digital",
+    description,
+    url: "/",
     siteName: "Undercheck",
     locale: "es_AR",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Undercheck | Agencia de marketing digital",
+    description,
+  },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
@@ -56,8 +71,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${archivo.variable} ${doto.variable} h-full`}>
+    <html lang="es-AR" className={`${archivo.variable} ${doto.variable} h-full`}>
       <body className="min-h-full">
+        <JsonLd />
         <SiteHeader />
         {children}
         <Footer />

@@ -9,7 +9,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-junta/60 bg-concreto/90 backdrop-blur-md">
       <div className="container-site flex h-16 items-center justify-between gap-4">
         <a href="#top" className="-mx-1 rounded-sm px-1 text-yeso">
-          <Logo className="h-7 w-auto" />
+          <Logo className="h-9 w-auto sm:h-10" />
         </a>
 
         <nav aria-label="Principal" className="flex items-center gap-1">
